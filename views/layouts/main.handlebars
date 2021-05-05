@@ -13,7 +13,16 @@
     <header>
       <h1>
         <a href="/">Terrific Tech</a>
+       
       </h1>
+          <nav>
+                {{#if loggedIn}}
+                {{!-- <a href='/dashboard'>dashboard</a> --}}
+                <button id="logout" >logout</button>
+                {{else}}
+                <a href="/login">login</a>
+                {{/if}}
+            </nav>
     </header>
     <main>
       {{{ body }}}
